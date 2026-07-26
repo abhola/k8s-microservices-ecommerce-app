@@ -8,7 +8,7 @@ resource "time_sleep" "wait_for_cluster" {
   depends_on = [
     module.retail_app_eks,
     helm_release.cert_manager,
-    helm_release.ingress_nginx
+    #helm_release.ingress_nginx
   ]
 }
 
@@ -47,7 +47,7 @@ resource "null_resource" "cleanup_k8s_resources" {
     kubectl_manifest.argocd_projects,
     helm_release.argocd,
     helm_release.kube_prometheus_stack,
-    helm_release.ingress_nginx
+   # helm_release.ingress_nginx
   ]
 }
 

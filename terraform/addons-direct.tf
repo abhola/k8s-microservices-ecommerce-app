@@ -36,7 +36,7 @@ resource "helm_release" "cert_manager" {
 # =============================================================================
 # NGINX INGRESS CONTROLLER
 # =============================================================================
-resource "helm_release" "ingress_nginx" {
+/*resource "helm_release" "ingress_nginx" {
   name             = "ingress-nginx"
   repository       = "https://kubernetes.github.io/ingress-nginx"
   chart            = "ingress-nginx"
@@ -67,7 +67,7 @@ resource "helm_release" "ingress_nginx" {
   ]
 
   depends_on = [module.retail_app_eks]
-}
+}*/
 
 # =============================================================================
 # PROMETHEUS STACK (Optional - Disabled by default)
