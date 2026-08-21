@@ -22,15 +22,15 @@ terraform {
       source  = "gavinbunney/kubectl"
       version = ">= 1.14"
     }
-    time = {
+    time = {                                            #The Time provider is used when Terraform needs to work with time-related resources.
       source  = "hashicorp/time"
       version = ">= 0.9"
     }
-    random = {
+    random = {                                          #The Random provider generates random values.
       source  = "hashicorp/random"
       version = ">= 3.0"
     }
-    null = {
+    null = {                                           #The Null provider is generally used when you need Terraform to perform an action that doesn't create a normal infrastructure resource. 
       source  = "hashicorp/null"
       version = ">= 3.0"
     }
